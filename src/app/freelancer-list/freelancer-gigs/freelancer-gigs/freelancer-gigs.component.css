@@ -1,0 +1,30 @@
+.ng-invalid.ng-touched{
+    border-color: rgb(173, 0, 0);
+}
+.error-block{
+    color: red;
+}
+h1{
+    font-family:Baskerville,Times,'Times New Roman',serif;
+    font-size:25px;
+    color:#9c7afa;
+    font-variant:small-caps;
+    font-weight:bold;
+    padding:15px 0px 15px 0px;
+}
+.aze{
+    font-family:Baskerville,Times,'Times New Roman',serif;
+ font-size:45px;
+ color:#ae6a9d;
+ font-variant:small-caps;
+ text-align:center;
+ font-weight:bold;
+ padding:15px 0px 15px 0px; 
+}
+.photo-control{
+    min-height:300px ;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px dashed blue;
+    margin: 5px;
+}

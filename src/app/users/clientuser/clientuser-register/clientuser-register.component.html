@@ -1,0 +1,70 @@
+<div class="container">
+<div class="row">
+    <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Sign Up
+      </div>
+      <div class="card-body">
+        <form [formGroup]="registerclientForm" (ngSubmit)="onSubmit()">
+          <div class="form-group col-12">
+              <label for="First name" class="form-label">First Name</label>
+              <input type="text" class="form-control" placeholder="First Name" formControlName="clientfname">
+
+              <span *ngIf="!registerclientForm.get('clientfname')?.valid && (
+              registerclientForm.get('clientfname')?.touched || clientsubmited )"  class="error-block"> 
+              Please Enter a Valide FirstName</span>
+
+
+          </div>
+          <div class="form-group col-12">
+            <label for="last name" class="form-label">last Name</label>
+            <input type="text" class="form-control" placeholder="last Name" formControlName="clientlname">
+            <span *ngIf="!registerclientForm.get('clientlname')?.valid && (
+            registerclientForm.get('clientlname')?.touched || clientsubmited ) " class="error-block"> 
+            Please Enter a Valide LastName</span>
+        </div>
+  
+          <div class="form-group col-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="Email"formControlName="clientemail">
+            <span *ngIf="!registerclientForm.get('clientemail')?.valid && (
+            registerclientForm.get('clientemail')?.touched || clientsubmited ) " class="error-block"> 
+            Please Enter a Valide Email</span>
+          </div>
+  
+          <div class="form-group col-12">
+            <label for="passwrod" class="form-label">Password</label>
+            <input type="password" class="form-control" id="Password1" placeholder="Password" formControlName="clientpw">
+            <span *ngIf="!registerclientForm.get('clientpw')?.valid && (
+            registerclientForm.get('clientpw')?.touched || clientsubmited )" class="error-block"> 
+            Please Enter a Valide Password</span>
+          </div>
+  
+          <div class="form-group col-12">
+            <label for="cpassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="Password2" placeholder="Confirm Password" formControlName="clientcpw">
+            <span *ngIf="!registerclientForm.get('clientcpw')?.valid && (
+            registerclientForm.get('clientcpw')?.touched || clientsubmited )"  class="error-block"> 
+            Please Confirm Your Password</span>
+          </div>
+  
+          <div class="form-group col-12">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input type="text" class="form-control" placeholder="Mobile" formControlName="clientmobile">
+            <span *ngIf="!registerclientForm.get('clientmobile')?.valid && (
+            registerclientForm.get('clientmobile')?.touched || clientsubmited )" class="error-block"> 
+            Please Enter a Valide Mobile Number</span>
+          </div>
+          <br>
+          <div class="form-group col-12">
+            <button type="submit" class="btn btn-primary me-3">Save</button>
+            <button type="reset" class="btn btn-secondary me-3">Cancel</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-img-wrapper">
+        <img *ngIf="gig__.imageurl" src="{{gig__.imageurl}}" class="card-img-top" alt="..." style="object-fit: cover; width: 275px;   height: 200px;">
+        <img *ngIf="!gig__.imageurl" src="\assets\images\222.jpg" class="card-img-top" alt="..." style="object-fit: cover; width: 275px;   height: 200px;">
+    </div>
+        <div class="card-body">
+          <h5 class="card-title">{{gig__.firstname}}</h5>
+          <h5 class="card-title">{{gig__.idcateg}}</h5>
+
+          <p class="card-textt">{{gig__.detail}}</p>
+          <p class="card-textt">{{gig__.about}}</p>
+          <p class="card-textt">{{gig__.avgprice | currency :'TND' : 'symbol' :'1.2-2' :'TN'  }}</p>
+          <a routerLink="/gigsdetail/{{gig__.id}}" class="btn btn-primary">See more</a>
+        </div>
+      </div>
+    </div>
+  
+    

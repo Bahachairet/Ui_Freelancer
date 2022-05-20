@@ -1,0 +1,83 @@
+<div class="container">
+<div class="row">
+    <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Sign Up
+      </div>
+      <div class="card-body">
+        <form [formGroup]="registeruserForm" (ngSubmit)="onSubmit()">
+          <div class="form-group col-12">
+
+              <label for="username" class="form-label">username</label>
+              <input type="text" class="form-control" placeholder="username" formControlName="username">
+              <span *ngIf="!registeruserForm.get('username')?.valid &&
+              (registeruserForm.get('username')?.touched || usersubmited)"  class="error-block"> 
+              Please Enter a Valide UserName</span>
+
+
+          </div>
+          <div class="form-group col-12">
+
+            <label for="useremail " class="form-label">Email </label>
+            <input type="text" class="form-control" placeholder="useremail " formControlName="useremail">
+            <span *ngIf="!registeruserForm.get('useremail')?.valid &&
+            (registeruserForm.get('useremail')?.touched || usersubmited)"  class="error-block"> 
+            Please Enter a Valide Email </span>
+
+
+        </div>
+        <div class="form-group col-12">
+
+          <label for="userpw  " class="form-label">Password </label>
+          <input type="password" class="form-control" placeholder="Password " formControlName="userpw">
+          <span *ngIf="!registeruserForm.get('userpw')?.valid &&
+          (registeruserForm.get('userpw')?.touched || usersubmited)"  class="error-block"> 
+          Please Enter a Valide Password </span>
+
+
+      </div>
+      <div class="form-group col-12">
+
+        <label for="usercpw  " class="form-label"> Confirm Password </label>
+        <input type="password" class="form-control" placeholder="Confirm Password" formControlName="usercpw">
+        <span *ngIf="!registeruserForm.get('usercpw')?.valid &&
+        (registeruserForm.get('usercpw')?.touched || usersubmited)"  class="error-block"> 
+        Please Confirm Password </span>
+
+
+    </div>
+    <div class="form-group col-12">
+
+      <label for="userdescription  " class="form-label">Description  </label>
+      <input type="text" class="form-control" placeholder="Description " formControlName="userdescription">
+      <span *ngIf="!registeruserForm.get('userdescription')?.valid &&
+      (registeruserForm.get('userdescription')?.touched || usersubmited)"  class="error-block"> 
+      Please Enter a Description </span>
+
+
+  </div>
+  <div class="form-group col-12">
+
+    <label for="useroccupation" class="form-label">Occupation   </label>
+    <input type="text" class="form-control" placeholder="Occupation " formControlName="useroccupation">
+    <span *ngIf="!registeruserForm.get('useroccupation')?.valid &&
+    (registeruserForm.get('useroccupation')?.touched || usersubmited)"  class="error-block"> 
+    Please Enter an Occupation </span>
+
+
+</div>
+         
+          
+          <br>
+          <div class="form-group col-12">
+            <button type="submit" class="btn btn-primary me-3">Save</button>
+            <button type="reset" class="btn btn-secondary me-3">Cancel</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

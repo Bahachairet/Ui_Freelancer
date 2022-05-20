@@ -1,0 +1,150 @@
+<div class="container">
+<div class="row mb-5">
+    <div class="col-8">
+
+    
+
+<div class="container">
+<div class="card">
+<div class="card-header">
+   <h1 class="aze">Add New Gig </h1> 
+</div>
+<div class="card-body">
+    <form (ngSubmit)="onSubmit()" [formGroup]="addgigform" >
+
+        <div>
+            <tabset #formtabs>
+
+
+
+              <tab formGroupName="basicinfo"  heading="Basic Info" ><h1>Basic Info</h1> 
+
+
+
+                <div class="form-group col-12">
+                    <label for="freelancer username">freelancer username</label>
+                    <input type="text" class="form-control" formControlName ="firstname" >
+                </div>
+                <br>
+                <div class="form-group col-12">
+                    <label for="categorie type">categorie type</label> <br><br>
+                    <input type="text" class="form-control" formControlName ="idcateg" >
+                </div>
+                <br>
+                <div class="form-group col-12">
+                    <label for="title">title</label>
+                    <input type="text" class="form-control" formControlName ="titlegig " >
+                </div>
+                <br><br>
+                <div class="form-group col-12">
+                    <button type="button" class="btn btn-primary btn-block" (click)="selecttab(1)" >Next</button>
+                </div>
+
+
+
+                
+              </tab>
+
+
+
+              <tab formGroupName="dtailing"  heading="Detail and Pricing"><h1>Detail and Pricing</h1>
+      
+      
+      
+                <div class="form-group col-12">
+                    <label for="about the gig">about the gig</label>
+                    <input type="text" class="form-control" formControlName ="aboutgig">
+                </div>
+                <div class="form-group col-12">
+                    <label for="price">price</label>
+                    <input type="text" class="form-control" formControlName ="avgprice">
+                </div>
+                <br><br>
+                <div class="form-group col-12">
+                    <button type="button" class="btn btn-primary btn-block" (click)="selecttab(2)">Next</button>
+                    <button type="button" class="btn btn-primary btn-block" (click)="selecttab(0)">Back</button>
+                </div>
+
+
+
+            </tab>
+
+
+
+              <tab formGroupName="abouting" heading="About The Freelancer"><h1>About The Freelancer</h1>
+               
+               
+               
+                <div class="form-group col-12">
+                    <label for="about the freelancer">about the freelancer</label>
+                    <input type="text" class="form-control" formControlName ="aboutfree">
+                </div>
+                <div class="form-group col-12">
+                    <label for="more discription">more discription</label>
+                    <input type="text" class="form-control" formControlName ="discripgig">
+                </div>
+
+                <br><br>
+
+                <div class="form-group col-12">
+                    <button type="button" class="btn btn-primary btn-block" (click)="selecttab(3)">Next</button>
+                    <button type="button" class="btn btn-primary btn-block" (click)="selecttab(1)">Back</button>
+   
+                </div>
+
+
+
+
+            </tab>
+
+
+
+             
+              <tab heading="Photos"><h1>Photos Upload</h1>
+
+
+
+                <br><br>
+                <div class="form-group col-12">
+                    <div class="photo-control">
+                        <button type="button" class="mt-5" >Upload</button>
+                    </div>
+                </div>
+
+                <div class="form-group col-12">
+                    
+                    <button type="button" class="btn btn-primary btn-block" (click)="selecttab(2)">Back</button>
+                  
+                </div>
+                <br>
+                <button type="Submit" class="btn btn-primary btn-block">Save</button>
+                <button type="reset" class="btn btn-primary btn-block">Cancel</button>
+
+
+
+            </tab>
+
+
+
+            </tabset>
+          </div>
+
+
+        
+    </form>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4">
+    <div class="card-headr">
+    <h3 class="aze">Your Gig Preview</h3>
+    <div>
+        <app-gigs-card [gig__]=""></app-gigs-card>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div>
